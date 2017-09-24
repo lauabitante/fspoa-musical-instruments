@@ -1,1 +1,1 @@
-# fspoa-musical-instruments
+This is an academic project.
