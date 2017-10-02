@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from "app/produto";
+import { CrudProdutosService } from "app/crud-produtos.service";
 
 @Component({
   selector: 'app-tabela-produtos',
@@ -6,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabela-produtos.component.css']
 })
 export class TabelaProdutosComponent implements OnInit {
-  titulo = "CRUD de Produtos";
-  constructor() { }
-  ngOnInit() { }
+  titulo = "Tabela de Produtos";
+  produtos: Produto[] = [];
+  constructor(private servico:CrudProdutosService) { }
+  ngOnInit() { 
+    this.produtos = this.servico.getProdutos();
+  }
 }
