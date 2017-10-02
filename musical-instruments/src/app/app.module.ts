@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TabelaProdutosComponent } from './tabela-produtos/tabela-produtos.component';
 import { FormProdutosComponent } from './form-produtos/form-produtos.component';
-import { CrudProdutosService } from "app/crud-produtos.service";
+import { CrudProdutosService } from "./crud-produtos.service";
 import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
