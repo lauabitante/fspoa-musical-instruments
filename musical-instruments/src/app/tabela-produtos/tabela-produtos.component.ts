@@ -14,4 +14,8 @@ export class TabelaProdutosComponent implements OnInit {
   ngOnInit() { 
     this.produtos = this.servico.getProdutos();
   }
+
+  remover(produto: Produto) {
+    this.servico.removerProduto(produto);
+  }
 }

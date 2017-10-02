@@ -11,6 +11,7 @@ import { RouterModule, Routes } from "@angular/router";
 const routes: Routes = [
   { path: '', redirectTo: 'lista', pathMatch: 'full' },
   { path: 'lista', component: TabelaProdutosComponent },
+  { path: 'edicao/:cod', component: FormProdutosComponent },
   { path: 'novo', component: FormProdutosComponent }
 ];
 
