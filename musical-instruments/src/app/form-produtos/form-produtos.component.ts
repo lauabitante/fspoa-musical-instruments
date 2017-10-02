@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudProdutosService } from "app/crud-produtos.service";
 import { Produto } from "app/produto";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-form-produtos',
@@ -12,7 +13,7 @@ export class FormProdutosComponent implements OnInit {
   titulo = "Cadastro de Produtos";
   produto:Produto;
 
-  constructor(private servico:CrudProdutosService) { }
+  constructor(private servico:CrudProdutosService, private router:Router) { }
 
   ngOnInit() { 
     this.produto = new Produto();
@@ -20,10 +21,10 @@ export class FormProdutosComponent implements OnInit {
 
   salvarProduto() {
     this.servico.adicionarProduto(this.produto);
-    this.produto = new Produto();
+    this.router.navigate(['/lista']);
   }
 
   cancelar() {
-    this.produto = new Produto();
+    this.router.navigate(['/lista']);
   }
 }

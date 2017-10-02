@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 import { TabelaProdutosComponent } from './tabela-produtos/tabela-produtos.component';
 import { FormProdutosComponent } from './form-produtos/form-produtos.component';
 import { CrudProdutosService } from "app/crud-produtos.service";
+import { RouterModule, Routes } from "@angular/router";
+
+const routes: Routes = [
+  { path: '', redirectTo: 'lista', pathMatch: 'full' },
+  { path: 'lista', component: TabelaProdutosComponent },
+  { path: 'novo', component: FormProdutosComponent }
+];
 
 @NgModule({
   declarations: [
@@ -15,7 +22,8 @@ import { CrudProdutosService } from "app/crud-produtos.service";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [CrudProdutosService],
   bootstrap: [AppComponent]
