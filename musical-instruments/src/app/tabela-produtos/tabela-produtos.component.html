@@ -1,9 +1,9 @@
 <h3>{{titulo}}</h3>
 <table>
   <tr>
-    <th>Codigo</th>
+    <th>Código</th>
     <th>Nome</th>
-    <th>Preco</th>
+    <th>Preço</th>
     <th>Editar</th>
     <th>Remover</th>
   </tr>
@@ -11,9 +11,9 @@
     <td>{{produto.codigo}}</td>
     <td>{{produto.nome}}</td>
     <td>{{produto.preco}}</td>
-    <td><a [routerLink]="['/edicao', produto.codigo]">Editar</a></td>  
-    <td><a routerLink="/lista" (click)="remover(produto)">Remover</a></td>               
+    <td><a [routerLink]="['/edicao', produto.codigo]"><img height="24px" src="assets/icon-edit.png" alt="Editar"/></a></td>  
+    <td><a routerLink="/lista" (click)="remover(produto)"><img height="24px" src="assets/icon-delete.png" alt="Remover"/></a></td>               
   </tr>
 </table>
 
-<a routerLink="/novo">Novo Produto</a>
+<!--<a routerLink="/novo">Novo Produto</a>-->

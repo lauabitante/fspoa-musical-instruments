@@ -33,4 +33,9 @@ input[type=button]:hover {
     border-radius: 4px;
     background-color: #F2F2F2;
     padding: 20px;
+    font-family: arial, sans-serif;
+}
+
+h3 {
+    font-family: arial, sans-serif;
 }
